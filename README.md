@@ -22,6 +22,3 @@
   6. log
   7. unlock
   8. revert
-
-## Issues
-1. 目前资源管理器中无法显示二级菜单,只支持 update,commit
