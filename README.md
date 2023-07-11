@@ -11,14 +11,3 @@
 
 ## 注意
 该扩展只支持 Mac 系统，并且需要已经安装了 [SnailSVN](https://apps.apple.com/cn/app/snailsvn/id847259925) 或 [SnailSVNLite](https://apps.apple.com/cn/app/snailsvn/id1063090543) 才会生效。  
-
-## changelog
-- 1.0.0 添加二级菜单,支持 更多的命令. 暂时只在菜单中支持以下命令:
-  1. update
-  2. commit
-  3. blame
-  4. delete
-  5. add
-  6. log
-  7. unlock
-  8. revert

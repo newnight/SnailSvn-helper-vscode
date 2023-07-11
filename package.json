@@ -2,10 +2,15 @@
   "name": "snailsvn",
   "displayName": "SnailSvn",
   "description": "SnailSvn helper for Vscode with more actions",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.80.0"
   },
+  "keywords": [
+    "SnailSVN",
+    "SVN",
+    "newnight"
+  ],
   "repository":"https://github.com/newnight/SnailSvn-helper-vscode",
   "publisher": "newnight",
   "categories": [
