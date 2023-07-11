@@ -135,6 +135,8 @@
     ]
   },
   "scripts": {
+    "package":"vsce package --yarn --no-dependencies",
+    "publish":"yarn run package && vsce publish",
     "vscode:prepublish": "yarn run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
