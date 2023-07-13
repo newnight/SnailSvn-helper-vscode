@@ -47,7 +47,7 @@
       },
       {
         "command": "newnight.snailsvn.delete",
-        "title": "🗑 Snailsvn Delete"
+        "title": "❌ Snailsvn Delete"
       },
       {
         "command": "newnight.snailsvn.unlock",
@@ -56,6 +56,10 @@
       {
         "command": "newnight.snailsvn.info",
         "title": "📝 Snailsvn Info"
+      },
+      {
+        "command": "newnight.snailsvn.cleanup",
+        "title": "🗑 Snailsvn Cleanup"
       }
     ],
     "menus": {
@@ -71,9 +75,13 @@
           "group": "snailsvn@2"
         },
         {
+          "command": "newnight.snailsvn.log",
+          "group": "snailsvn@3"
+        },
+        {
           "submenu": "newnight.snailsvn",
           "when": "editorFocus",
-          "group": "snailsvn@3"
+          "group": "snailsvn@4"
         }
       ],
       "explorer/context": [
@@ -86,8 +94,12 @@
           "group": "snailsvn@2"
         },
         {
-          "submenu": "newnight.snailsvn",
+          "command": "newnight.snailsvn.log",
           "group": "snailsvn@3"
+        },
+        {
+          "submenu": "newnight.snailsvn",
+          "group": "snailsvn@4"
         }
       ],
       "newnight.snailsvn":[
@@ -125,6 +137,10 @@
         {
           "command": "newnight.snailsvn.revert",
           "group": "snailsvn@5"
+        },
+        {
+          "command": "newnight.snailsvn.cleanup",
+          "group": "snailsvn@9"
         }
       ]
     },
