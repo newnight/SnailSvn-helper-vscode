@@ -2,7 +2,7 @@
   "name": "snailsvn",
   "displayName": "SnailSvn",
   "description": "SnailSvn helper for Vscode with more actions",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "engines": {
     "vscode": "^1.80.0"
   },
@@ -48,6 +48,10 @@
       {
         "command": "newnight.snailsvn.delete",
         "title": "❌ Snailsvn Delete"
+      },
+      {
+        "command": "newnight.snailsvn.lock",
+        "title": "🔒 Snailsvn Lock"
       },
       {
         "command": "newnight.snailsvn.unlock",
@@ -128,6 +132,10 @@
         },
         {
           "command": "newnight.snailsvn.delete",
+          "group": "snailsvn@7"
+        },
+        {
+          "command": "newnight.snailsvn.lock",
           "group": "snailsvn@7"
         },
         {

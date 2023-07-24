@@ -1,13 +1,14 @@
+[中文](./README_zh.md) | [English](./README.md)
 # SnailSVN Helper
-因为[原版](https://marketplace.visualstudio.com/items?itemName=Zlorn.snail-svn-helper)支持的命令比较少,所以增加了一些其他需要的命令
+Because the [original version](https://marketplace.visualstudio.com/items?itemName=Zlorn.snail-svn-helper) supported fewer commands, So we added some other necessary commands
 
-这是一个基于 [SnailSVN](https://apps.apple.com/cn/app/snailsvn/id847259925) 或 [SnailSVNLite](https://apps.apple.com/cn/app/snailsvn/id1063090543) 的 VSCode 右键快捷菜单扩展。
-
-
-
-## 使用方法
-在文件内容中右键，或者在资源管理器中右键，都可以看到此快捷菜单。保留了常用的update 和 commit ,其他 命令放入二级菜单.
+this extension is base on [SnailSVN](https://apps.apple.com/cn/app/snailsvn/id847259925) or [SnailSVNLite](https://apps.apple.com/cn/app/snailsvn/id1063090543).
 
 
-## 注意
-该扩展只支持 Mac 系统，并且需要已经安装了 [SnailSVN](https://apps.apple.com/cn/app/snailsvn/id847259925) 或 [SnailSVNLite](https://apps.apple.com/cn/app/snailsvn/id1063090543) 才会生效。  
+
+## how to use 
+Right-click in the file content or right-click in the Explorer to see this shortcut menu. The commonly used update and commit commands are retained, while other commands are placed in the secondary menu
+
+
+## notes
+this exception only support MacOs and need intalled [SnailSVN](https://apps.apple.com/cn/app/snailsvn/id847259925) or [SnailSVNLite](https://apps.apple.com/cn/app/snailsvn/id1063090543).  
