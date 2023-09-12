@@ -3,7 +3,8 @@
 import * as vscode from 'vscode';
 import * as fs from "node:fs";
 import * as child_process from "child_process";
- //import Blamer from "./blame";
+import * as _path from "path";
+registerLocalize();
 const simpleActions = ["checkout", "cleanup", "commit", "export", "import", "log", "merge", "relocate", "revert", "switch", "update", "add-working-copy"];
 const complexActions = ["add", "blame", "delete", "info", "ignore", "lock", "unlock"];
 const allActions = simpleActions.concat(complexActions);
@@ -22,6 +23,30 @@ export function activate(context: vscode.ExtensionContext) {
 	} else {
 		registerActions(allActions, context);
 	}
+	context.subscriptions.push(vscode.commands.registerCommand(`newnight.snailsvn.resetLocalize`, async () => {
+		registerLocalize();
+	}));
+}
+export function onDidChangeConfiguration() {
+	console.log('change configuare');
+	registerLocalize();
+}
+function registerLocalize(){
+	const locale = vscode.env.language;
+	const  {localizeSetting} = vscode.workspace.getConfiguration("SnailSvn");
+	const extensionPath = vscode.extensions.getExtension("newnight.snailsvn")?.extensionPath || '';
+	const localizeTemplatePath = _path.join(extensionPath, "l10n", "bundle.l10n.json");
+	const nlsPath = _path.join(extensionPath, "package.nls."+locale+".json");
+	if (!fs.existsSync(localizeTemplatePath)) {
+		return;
+	}
+	const bundle = JSON.parse(fs.readFileSync(localizeTemplatePath).toString());
+	for (const key in bundle) {
+		if (localizeSetting.hasOwnProperty(key) && localizeSetting[key]) {
+			bundle[key] = localizeSetting[key];
+		}
+	}
+	fs.writeFileSync(nlsPath, JSON.stringify(bundle, null, 4));
 }
 function registerActions(allActions: string[], context:vscode.ExtensionContext) {
 	allActions.forEach((action:string) => {
@@ -35,12 +60,6 @@ function registerActions(allActions: string[], context:vscode.ExtensionContext) 
 				path= vscode.workspace.workspaceFolders;
 			}
 			console.log(path);
-			/* if (action.includes('blame')) {
-				const blamer = new Blamer(path);
-				blamer.showGutter();
-			}else{
-				await execSvnCmd(action,path);
-			} */
 			await execSvnCmd(action,path);
 		}));
 	});
