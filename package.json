@@ -2,7 +2,7 @@
   "name": "snailsvn",
   "displayName": "SnailSvn",
   "description": "SnailSvn helper for Vscode with more actions",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "engines": {
     "vscode": "^1.80.0"
   },

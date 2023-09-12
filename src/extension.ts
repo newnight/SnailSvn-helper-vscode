@@ -41,12 +41,16 @@ function registerLocalize(){
 		return;
 	}
 	const bundle = JSON.parse(fs.readFileSync(localizeTemplatePath).toString());
+	let changed = true;
 	for (const key in bundle) {
 		if (localizeSetting.hasOwnProperty(key) && localizeSetting[key]) {
 			bundle[key] = localizeSetting[key];
 		}
+		changed = changed && bundle[key] !== localizeSetting[key];
 	}
-	fs.writeFileSync(nlsPath, JSON.stringify(bundle, null, 4));
+	if(changed || !fs.existsSync(nlsPath)) {
+		fs.writeFileSync(nlsPath, JSON.stringify(bundle, null, 4));
+	}
 }
 function registerActions(allActions: string[], context:vscode.ExtensionContext) {
 	allActions.forEach((action:string) => {
