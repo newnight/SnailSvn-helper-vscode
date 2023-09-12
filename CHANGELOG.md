@@ -18,3 +18,6 @@ Add a secondary menu to support more commands Currently, the following commands 
   1. 添加清理`cleanUp`  add `cleanup`
 ## 1.0.3
   1. 添加锁定`lock` add `lock`
+
+## 1.0.4
+  1. 添加l10n支持  support l10n
