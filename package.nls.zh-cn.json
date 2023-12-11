@@ -1,0 +1,14 @@
+{
+    "Snail Svn": "🐌 Snail Svn",
+    "Snailsvn Update": "⤵️ Snailsvn Update",
+    "Snailsvn Commit": "⤴️ Snailsvn Commit",
+    "Snailsvn Revert": "♻️ 还原",
+    "Snailsvn Log": "🗓 Snailsvn Log",
+    "Snailsvn Add": "➕ 添加",
+    "Snailsvn Blame": "👁 追溯",
+    "Snailsvn Delete": "❌ 删除",
+    "Snailsvn Lock": "🔒 加锁",
+    "Snailsvn Unlock": "🔑 解锁 ",
+    "Snailsvn Info": "📝 Snailsvn Info",
+    "Snailsvn Cleanup": "🗑 清理"
+}
