@@ -2,7 +2,7 @@
   "name": "snailsvn",
   "displayName": "SnailSvn",
   "description": "SnailSvn helper for Vscode with more actions",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "engines": {
     "vscode": "^1.80.0"
   },
@@ -190,6 +190,11 @@
               "Snailsvn Cleanup": "🗑 Snailsvn Cleanup"
             },
             "description": "localize configuration"
+          },
+          "SnailSvn.realPath": {
+            "type": "boolean",
+            "default": false,
+            "description": "Use the real path instead of the symbolic link"
           }
         }
       }

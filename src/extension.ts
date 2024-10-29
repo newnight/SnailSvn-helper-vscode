@@ -53,6 +53,7 @@ function registerLocalize(){
 	}
 }
 function registerActions(allActions: string[], context:vscode.ExtensionContext) {
+	const { realPath } = vscode.workspace.getConfiguration("SnailSvn");
 	allActions.forEach((action:string) => {
 		context.subscriptions.push(vscode.commands.registerCommand(`newnight.snailsvn.${action}`, async (uri) => {
 			let path ;
@@ -62,6 +63,9 @@ function registerActions(allActions: string[], context:vscode.ExtensionContext) 
 				path= vscode.window.activeTextEditor.document.fileName;
 			}else {
 				path= vscode.workspace.workspaceFolders;
+			}
+			if (realPath){
+				path = fs.realpathSync(path);
 			}
 			console.log(path);
 			await execSvnCmd(action,path);
